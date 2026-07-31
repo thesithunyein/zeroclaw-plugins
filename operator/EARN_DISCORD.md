@@ -1,3 +1,5 @@
+# Checklist first: [BEFORE_RECORD.md](BEFORE_RECORD.md)
+
 # After you re-record — paste these
 
 ## Superteam Earn (edit submission)
