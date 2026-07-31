@@ -4,13 +4,16 @@
 **Daily job:** charge in BRL → customer pays USDC on Solana → owner gets paid alert.  
 **Custody:** T1 / T0 — agent never holds a key.
 
-This is a **running use case**. Plugins exist to enforce allowlists, caps, and fail-closed injection checks inside the WASM sandbox. Registry PRs are out of scope during judging; code lives on this fork.
+This is a **running use case**. Plugins exist to enforce allowlists, caps, and fail-closed injection checks inside the WASM sandbox. Registry PRs are out of scope during judging.
+
+**Canonical product repo for judges:** https://github.com/thesithunyein/caixa  
+This fork branch mirrors the same plugins for ZeroClaw-plugins layout.
 
 | Asset | Link |
 |-------|------|
-| Video | *(upload after re-record — Pay QR + optional settle)* |
-| Repo | https://github.com/thesithunyein/zeroclaw-plugins/tree/feat/caixa-payment-terminal |
-| Write-up | this file |
+| Video | *(new upload: charge → QR → pay → watch → injection refuse)* |
+| Product repo | https://github.com/thesithunyein/caixa |
+| Write-up | https://github.com/thesithunyein/caixa/blob/main/SHOWCASE.md (canonical) · this file (fork mirror) |
 | Evening setup | [operator/README.md](operator/README.md) |
 | Record script | [operator/RECORDING.md](operator/RECORDING.md) |
 | Redacted config | [operator/config.example.toml](operator/config.example.toml) |

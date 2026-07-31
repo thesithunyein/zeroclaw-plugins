@@ -1,48 +1,34 @@
-# Before you hit record — 1st-place checklist
+# Before record — beat ~300 submissions
 
-Do these in order. Daemon should already be running with Pay QR WASM.
+## 0) Your merchant pubkey (do this first)
 
-## 0) Merchant address (critical)
+Demo recipient must be **your** Phantom address before you pay on video.
 
-Config still has demo recipient `DYw8jCTfwHNRJhhmFcbXvVDTqWMEVFBX6ZKUmG5CNSKK`.
-
-If you will **pay real USDC** in the video, set **your** Phantom address first:
-
+WSL:
 ```bash
-# WSL — edit both entries (charge + watch)
 nano ~/.zeroclaw/config.toml
+# under caixa-charge and caixa-watch:
 # recipient = "<YOUR_PUBKEY>"
-# then restart daemon
+pkill -f 'zeroclaw daemon'
+# restart daemon (see operator/README.md)
 ```
 
-Or paste your pubkey in chat and we’ll wire it.
+Or send the pubkey in chat and we’ll wire it.
 
-## 1) Warm the chat (30s, no recording yet)
+## 1) Warm-up (no camera)
 
-Send:
 ```
 Cobra mesa 9: R$ 25
 ```
 
-Confirm reply has:
-- `https://api.qrserver.com/v1/create-qr-code/...` (opens a **QR image**)
-- `solana:...`
+Must see `api.qrserver.com` QR link + `solana:`. Tap QR → image, not blank.
 
-Tap the QR link once offline — must **not** be blank Phantom.
+## 2) Record ([RECORDING.md](RECORDING.md))
 
-## 2) Record (~2 min)
+Charge → QR open → Phantom pay → “já pagou?” → injection refuse.
 
-Follow [RECORDING.md](RECORDING.md). Strongest cut: charge → QR open → Phantom scan → tiny pay → `A mesa 9 já pagou?`
+## 3) Ship same hour ([EARN_DISCORD.md](EARN_DISCORD.md))
 
-If you won’t pay: still open the QR image on camera; say customer would sign; ask watch (may say not paid yet). Weaker but acceptable.
-
-## 3) Ship the showcase (same hour)
-
-1. Upload YouTube (unlisted)
-2. Edit Earn — links in [EARN_DISCORD.md](EARN_DISCORD.md) (**fork**, not closed PR #83)
-3. Post Discord `#solana-bounty` from that file
-4. Optional X reply with new video URL
-
-## 4) Done when
-
-Judges can: watch video → open SHOWCASE.md → follow operator README → see same Telegram loop.
+Earn submission link = `https://github.com/thesithunyein/caixa`  
+Discord `#solana-bounty` showcase post  
+Optional X reply with new video
